@@ -7,3 +7,6 @@
 [submodule "bundle/nerd-tree"]
 	path = bundle/nerd-tree
 	url = http://github.com/vim-scripts/The-NERD-tree.git
+[submodule "bundle/vim-tmux-navigator"]
+	path = bundle/vim-tmux-navigator
+	url = http://github.com/christoomey/vim-tmux-navigator.git
