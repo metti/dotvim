@@ -23,11 +23,12 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
+set background=dark
 
 set undodir=~/.vim/undodir
 set undofile
@@ -39,10 +40,10 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 :let mapleader = ","
 
 set wildmenu
-"set wildmode=longest:full
+set wildmode=list:longest
+set wildignore+=*.o,*.obj,*.git,*.crt,*.pyc
 
 set wrap
-"set showbreak=▶
 set modeline
 set modelines=2
 
@@ -62,9 +63,9 @@ set statusline+=%= " right align remainder of status line
 set statusline+=\ %14(%l,%c%V%) " line,col
 set statusline+=\ %P " file position
 
-"set tw=76
-" set colorcolumn=+1,+2,+3
-
+" Command-T
+let g:CommandTMaxFiles=50000
+let g:CommandTMaxDepth=20
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
