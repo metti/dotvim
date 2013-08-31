@@ -1,8 +1,17 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-set hidden
-set noswapfile
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/Command-T.git'
+Bundle 'The-NERD-tree'
+Bundle 'christoomey/vim-tmux-navigator.git'
 
 syntax on
 filetype plugin indent on
@@ -17,6 +26,9 @@ augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
 
 augroup END
+
+set hidden
+set noswapfile
 
 set incsearch
 set hlsearch
