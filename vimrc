@@ -1,17 +1,20 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'wincent/Command-T.git'
+Plugin 'christoomey/vim-tmux-navigator.git'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'fatih/vim-go'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'wincent/Command-T.git'
-Bundle 'The-NERD-tree'
-Bundle 'christoomey/vim-tmux-navigator.git'
+call vundle#end()
 
 syntax on
 filetype plugin indent on
@@ -22,9 +25,7 @@ if has("autocmd")
 endif
 
 augroup mkd
-
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
-
 augroup END
 
 set hidden
@@ -49,8 +50,6 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 " vim workspace
 
-:let mapleader = ","
-
 set wildmenu
 set wildmode=list:longest
 set wildignore+=*.o,*.obj,*.git,*.crt,*.pyc
@@ -70,13 +69,13 @@ set statusline+=%f " filename
 set statusline+=%< " cut here if line's too long
 set statusline+=%h%m%r%w " status flags
 set statusline+=\ [%{strlen(&ft)?&ft:'none'}] " filetype
-set statusline+=%{fugitive#statusline()} " fugitive Git branch
+set statusline+=\ %{fugitive#statusline()} " fugitive Git branch
 set statusline+=%= " right align remainder of status line
 set statusline+=\ %14(%l,%c%V%) " line,col
 set statusline+=\ %P " file position
 
 " Command-T
-let g:CommandTMaxFiles=50000
+let g:CommandTMaxFiles=120000
 let g:CommandTMaxDepth=20
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -85,3 +84,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
