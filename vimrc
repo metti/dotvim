@@ -9,6 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'wincent/Command-T.git'
+Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
@@ -52,7 +53,7 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 set wildmenu
 set wildmode=list:longest
-set wildignore+=*.o,*.obj,*.git,*.crt,*.pyc
+set wildignore+=*.o,*.obj,*.git,*.crt,*.pyc,*.so,*.exe
 
 set wrap
 set modeline
@@ -77,6 +78,9 @@ set statusline+=\ %P " file position
 " Command-T
 let g:CommandTMaxFiles=120000
 let g:CommandTMaxDepth=20
+
+" CtrlP
+let g:ctrlp_max_files=0
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
