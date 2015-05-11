@@ -81,6 +81,12 @@ let g:CommandTMaxDepth=20
 
 " CtrlP
 let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|build)$',
+  \ 'file': '\v\.(exe|so|dll|pyc|o|lib)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+let g:ctrlp_clear_cache_on_exit = 0
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
