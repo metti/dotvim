@@ -59,6 +59,9 @@ set wrap
 set modeline
 set modelines=2
 
+imap jj <esc>
+nnoremap <Space> @q
+
 " NerdTree
 map <F3> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc$']
