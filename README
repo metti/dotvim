@@ -9,3 +9,7 @@
 #Fetch submodules:
 
     pushd ~/.vim && git submodule init && git submodule update && popd
+
+#Install modules:
+
+    :VundleUpdate
