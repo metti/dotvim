@@ -44,6 +44,8 @@ set autoindent
 set expandtab
 set background=dark
 
+set scrolloff=5
+
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
