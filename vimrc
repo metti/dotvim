@@ -12,6 +12,7 @@ Plugin 'wincent/Command-T.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 
@@ -108,3 +109,17 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
+
+" Syntastic
+
+let g:syntastic_check_on_open=1
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_jump=0
+let g:syntastic_enable_balloons = 1
+
+let g:syntastic_python_flake8_args = "--max-line-length=100"
+let g:syntastic_python_checkers = [ 'python', 'flake8', 'pylint', 'pep257' ]
+"let g:syntastic_python_checkers = [ 'python' ]
+"let g:syntastic_auto_loc_list=0
+
