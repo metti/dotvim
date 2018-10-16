@@ -67,7 +67,7 @@ set wrap
 set modeline
 set modelines=2
 
-imap jj <esc>
+imap jk <esc>
 nnoremap <Space> @q
 
 " NerdTree
