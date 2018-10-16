@@ -7,6 +7,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wincent/Command-T.git'
 Plugin 'kien/ctrlp.vim'
@@ -24,6 +25,10 @@ filetype plugin indent on
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+endif
+
+if has("autocmd")
+    autocmd BufWritePost * GitGutter
 endif
 
 augroup mkd
