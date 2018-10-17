@@ -9,6 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator.git'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
@@ -94,6 +96,10 @@ filetype plugin indent on
 
 
 """ Plugin configuration """
+
+" FZF
+nmap ;         :Buffers<CR>
+nmap <Leader>f :Files<CR>
 
 " GitGutter
 if has("autocmd")
