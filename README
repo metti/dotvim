@@ -13,3 +13,7 @@
 #Install modules:
 
     :VundleUpdate
+
+#Misc setup steps:
+
+    mkdir ~/.vim/undodir
