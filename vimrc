@@ -9,13 +9,9 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'wincent/Command-T.git'
-Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'ervandew/supertab'
-Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -86,35 +82,12 @@ set statusline+=%= " right align remainder of status line
 set statusline+=\ %14(%l,%c%V%) " line,col
 set statusline+=\ %P " file position
 
-" Command-T
-let g:CommandTMaxFiles=120000
-let g:CommandTMaxDepth=20
-
-" CtrlP
-let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|build)$',
-  \ 'file': '\v\.(exe|so|dll|pyc|o|lib)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-let g:ctrlp_clear_cache_on_exit = 0
-
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-" Go support
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
 
 " Syntastic
 
