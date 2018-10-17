@@ -11,6 +11,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'lyuts/vim-rtags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
@@ -109,6 +110,11 @@ endif
 " NerdTree
 map <F3> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc$']
+
+" rtags shortcuts
+noremap gd :call rtags#JumpTo(g:SAME_WINDOW)<CR>
+noremap gr :call rtags#FindRefs()<CR>
+noremap gb :call rtags#JumpBack()<CR>
 
 " Syntastic
 
