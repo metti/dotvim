@@ -15,6 +15,8 @@ Plugin 'lyuts/vim-rtags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-unimpaired'
 
 Plugin 'marciomazza/vim-brogrammer-theme'
 
