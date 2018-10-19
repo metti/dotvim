@@ -16,6 +16,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'marciomazza/vim-brogrammer-theme'
+
 call vundle#end()
 
 if has("autocmd")
@@ -43,6 +45,12 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set expandtab
+
+
+" theme
+set termguicolors
+set background=dark
+colorscheme brogrammer
 
 " appearence
 set colorcolumn=80
