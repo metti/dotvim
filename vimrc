@@ -15,9 +15,11 @@ Plugin 'lyuts/vim-rtags'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'valloric/YouCompleteMe'
 
 Plugin 'marciomazza/vim-brogrammer-theme'
 
