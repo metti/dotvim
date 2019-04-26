@@ -12,6 +12,7 @@ endif
 call plug#begin()
 
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'fatih/vim-go', { 'tag': '*', 'for' : 'go' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lyuts/vim-rtags', { 'for': ['c', 'cpp'] }
