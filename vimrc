@@ -13,7 +13,6 @@ Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'lyuts/vim-rtags'
-Plugin 'rhysd/vim-clang-format'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
@@ -113,7 +112,7 @@ filetype plugin indent on
 """ Plugin configuration """
 
 " ClangFormat
-autocmd FileType c,cpp map <tab> :ClangFormat<CR>
+autocmd FileType c,cpp map <tab> :pyf /usr/lib/clang-format/clang-format.py<cr>
 
 " FZF
 nmap ;         :Buffers<CR>
