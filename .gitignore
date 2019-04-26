@@ -1,4 +1,5 @@
-bundle
+autoload
+plugged
 undodir
 .netrwhist
 .ropeproject
