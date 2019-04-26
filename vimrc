@@ -1,3 +1,5 @@
+set clipboard=exclude:.* " prevent vim from connecting to the X server
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
