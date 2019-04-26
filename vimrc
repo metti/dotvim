@@ -142,5 +142,13 @@ let g:syntastic_python_checkers = [ 'python', 'flake8', 'pylint', 'pep257' ]
 "let g:syntastic_python_checkers = [ 'python' ]
 "let g:syntastic_auto_loc_list=0
 
+" TermDebug
+packadd termdebug
+nnoremap <Leader>n :Over<CR>
+nnoremap <Leader>s :Step<CR>
+nnoremap <Leader>c :Continue<CR>
+nnoremap <Leader>f :Finish<CR>
+nnoremap <Leader>e :Eval<CR>
+
 " Include local configuration (touch it if it fails)
 source ~/.vimrc.local
