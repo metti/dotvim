@@ -143,3 +143,5 @@ let g:syntastic_python_checkers = [ 'python', 'flake8', 'pylint', 'pep257' ]
 "let g:syntastic_python_checkers = [ 'python' ]
 "let g:syntastic_auto_loc_list=0
 
+" Include local configuration (touch it if it fails)
+source ~/.vimrc.local

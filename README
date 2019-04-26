@@ -6,6 +6,10 @@
 
     ln -s ~/.vim/vimrc ~/.vimrc
 
+#Touch local configuration
+
+    touch ~/.vimrc.local
+
 #Fetch submodules:
 
     pushd ~/.vim && git submodule init && git submodule update && popd
