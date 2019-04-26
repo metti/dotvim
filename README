@@ -1,23 +1,4 @@
-#Installation:
+# Installation:
 
-    git clone git://github.com/metti/dotvim.git ~/.vim
+    git clone git://github.com/metti/dotvim.git ~/.vim &&  ~/.vim/setup.sh
 
-#Create symlink:
-
-    ln -s ~/.vim/vimrc ~/.vimrc
-
-#Touch local configuration
-
-    touch ~/.vimrc.local
-
-#Fetch submodules:
-
-    pushd ~/.vim && git submodule init && git submodule update && popd
-
-#Install modules:
-
-    :VundleUpdate
-
-#Misc setup steps:
-
-    mkdir ~/.vim/undodir
