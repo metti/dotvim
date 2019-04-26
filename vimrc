@@ -23,8 +23,6 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/YouCompleteMe'
 
-Plugin 'marciomazza/vim-brogrammer-theme'
-
 call vundle#end()
 
 if has("autocmd")
@@ -59,7 +57,6 @@ set expandtab
 " theme
 set termguicolors
 set background=dark
-colorscheme brogrammer
 
 " appearence
 set colorcolumn=80
