@@ -9,7 +9,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
@@ -22,6 +21,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'valloric/YouCompleteMe'
+Plugin 'mhinz/vim-signify'
 
 call vundle#end()
 
@@ -119,11 +119,6 @@ autocmd FileType c,cpp map <tab> :ClangFormat<CR>
 nmap ;         :Buffers<CR>
 nmap <Leader>f :Files<CR>
 
-" GitGutter
-if has("autocmd")
-    autocmd BufWritePost * GitGutter
-endif
-
 " NerdTree
 map <F3> :NERDTreeToggle<cr>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc$']
@@ -132,6 +127,9 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc$']
 noremap gd :call rtags#JumpTo(g:SAME_WINDOW)<CR>
 noremap gr :call rtags#FindRefs()<CR>
 noremap gb :call rtags#JumpBack()<CR>
+
+" Signify
+let g:signify_vcs_list = ['git']
 
 " Syntastic
 
