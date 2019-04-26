@@ -39,6 +39,8 @@ augroup END
 " general
 set hidden
 set noswapfile
+set autowrite
+set textwidth=79
 
 " searching
 set incsearch
