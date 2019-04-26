@@ -142,6 +142,18 @@ let g:syntastic_python_checkers = [ 'python', 'flake8', 'pylint', 'pep257' ]
 "let g:syntastic_python_checkers = [ 'python' ]
 "let g:syntastic_auto_loc_list=0
 
+" Get developer info from git config
+funct! GitGetAuthor()
+	" Strip terminating NULLs to prevent stray ^A chars (see :help system)
+	return system('git config --null --get user.name | tr -d "\0"') .
+	      \ ' <' . system('git config --null --get user.email | tr -d "\0"') . '>'
+endfunc
+map <Leader>ack :exe 'put =\"Acked-by: ' . GitGetAuthor() . '\"'<CR>
+map <Leader>rev :exe 'put =\"Reviewed-by: ' . GitGetAuthor() . '\"'<CR>
+map <Leader>sob :exe 'put =\"Signed-off-by: ' . GitGetAuthor() . '\"'<CR>
+map <Leader>tst :exe 'put =\"Tested-by: ' . GitGetAuthor() . '\"'<CR>
+
+
 " TermDebug
 packadd termdebug
 nnoremap <Leader>n :Over<CR>
