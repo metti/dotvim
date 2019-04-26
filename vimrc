@@ -14,12 +14,10 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'lyuts/vim-rtags'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'valloric/YouCompleteMe'
 Plugin 'mhinz/vim-signify'
 
 call vundle#end()
@@ -129,18 +127,6 @@ noremap gb :call rtags#JumpBack()<CR>
 
 " Signify
 let g:signify_vcs_list = ['git']
-
-" Syntastic
-
-let g:syntastic_check_on_open=1
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_jump=0
-let g:syntastic_enable_balloons = 1
-
-let g:syntastic_python_flake8_args = "--max-line-length=100"
-let g:syntastic_python_checkers = [ 'python', 'flake8', 'pylint', 'pep257' ]
-"let g:syntastic_python_checkers = [ 'python' ]
-"let g:syntastic_auto_loc_list=0
 
 " Get developer info from git config
 funct! GitGetAuthor()
