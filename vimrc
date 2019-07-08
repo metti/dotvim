@@ -173,7 +173,6 @@ packadd termdebug
 nnoremap <Leader>n :Over<CR>
 nnoremap <Leader>s :Step<CR>
 nnoremap <Leader>c :Continue<CR>
-nnoremap <Leader>f :Finish<CR>
 nnoremap <Leader>e :Eval<CR>
 
 " Include local configuration (touch it if it fails)
