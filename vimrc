@@ -103,6 +103,11 @@ autocmd BufWinLeave * call clearmatches()
 imap jk <esc>
 nnoremap <Space> @q
 
+command WQ wq
+command Wq wq
+command W w
+command Q q
+
 " misc
 syntax on
 filetype plugin indent on
