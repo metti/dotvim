@@ -18,7 +18,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lyuts/vim-rtags', { 'for': ['c', 'cpp'] }
 Plug 'mhinz/vim-signify'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
@@ -129,10 +128,6 @@ autocmd FileType rust map <tab> :RustFmt<cr>
 nmap ;         :Buffers<CR>
 nmap <Leader>f :Files<CR>
 
-" NerdTree
-map <F3> :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc$']
-
 " rtags shortcuts
 noremap gd :call rtags#JumpTo(g:SAME_WINDOW)<CR>
 noremap gr :call rtags#FindRefs()<CR>
@@ -171,17 +166,6 @@ function! Tab_Or_Complete()
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 set dictionary+=/usr/share/dict/words
-
-" Timestamping for minutes
-nmap <Leader>tt i<C-R>=strftime("\n%Y-%m-%d %a %I:%M %p\n")<CR><Esc>
-imap <Leader>tt <C-R>=strftime("\n%Y-%m-%d %a %I:%M %p\n")<CR>
-
-" TermDebug
-packadd termdebug
-nnoremap <Leader>n :Over<CR>
-nnoremap <Leader>s :Step<CR>
-nnoremap <Leader>c :Continue<CR>
-nnoremap <Leader>e :Eval<CR>
 
 hi mailQuoted1	ctermfg=green
 hi mailQuoted2	ctermfg=cyan
