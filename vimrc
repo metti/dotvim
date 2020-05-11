@@ -67,6 +67,7 @@ set scrolloff=5
 set sidescroll=1
 set vb t_vb=""
 set wrap
+set diffopt=vertical
 
 " undo
 set undodir=~/.vim_undodir
