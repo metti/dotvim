@@ -110,6 +110,8 @@ command Wq wq
 command W w
 command Q q
 
+nnoremap <F5> :bufdo e<CR>
+
 " misc
 syntax on
 filetype plugin indent on
