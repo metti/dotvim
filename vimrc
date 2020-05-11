@@ -120,7 +120,7 @@ filetype plugin indent on
 """ Plugin configuration """
 
 " ClangFormat
-autocmd FileType c,cpp map <tab> :pyf /usr/lib/clang-format/clang-format.py<cr>
+autocmd FileType c,cpp map <tab> :py3f /usr/lib/clang-format/clang-format.py<cr>
 
 " Rust Format
 autocmd FileType rust map <tab> :RustFmt<cr>
