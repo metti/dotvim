@@ -13,6 +13,7 @@ call plug#begin()
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'tag': '*', 'for' : 'go' }
+Plug 'rust-lang/rust.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lyuts/vim-rtags', { 'for': ['c', 'cpp'] }
@@ -117,6 +118,9 @@ filetype plugin indent on
 
 " ClangFormat
 autocmd FileType c,cpp map <tab> :pyf /usr/lib/clang-format/clang-format.py<cr>
+
+" Rust Format
+autocmd FileType rust map <tab> :RustFmt<cr>
 
 " FZF
 nmap ;         :Buffers<CR>
