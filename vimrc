@@ -183,6 +183,13 @@ nnoremap <Leader>s :Step<CR>
 nnoremap <Leader>c :Continue<CR>
 nnoremap <Leader>e :Eval<CR>
 
+hi mailQuoted1	ctermfg=green
+hi mailQuoted2	ctermfg=cyan
+hi mailQuoted3	ctermfg=darkcyan
+hi mailQuoted4	ctermfg=blue
+hi mailQuoted5	ctermfg=blue
+hi mailQuoted6	ctermfg=blue
+
 " Include local configuration (touch it if it fails)
 source ~/.vimrc.local
 
