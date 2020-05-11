@@ -152,6 +152,7 @@ map <Leader>rev :exe 'put =\"Reviewed-by: ' . GitGetAuthor() . '\"'<CR>
 map <Leader>sob :exe 'put =\"Signed-off-by: ' . GitGetAuthor() . '\"'<CR>
 map <Leader>tst :exe 'put =\"Tested-by: ' . GitGetAuthor() . '\"'<CR>
 
+map <Leader>c :exe 'put =\"Cheers,\nMatthias\n\"'<CR>
 
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
