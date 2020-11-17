@@ -133,6 +133,8 @@ noremap gd :call rtags#JumpTo(g:SAME_WINDOW)<CR>
 noremap gr :call rtags#FindRefs()<CR>
 noremap gb :call rtags#JumpBack()<CR>
 
+let g:rtagsRcCmd = 'rtags-rc'
+
 " Signify
 let g:signify_vcs_list = ['git']
 
