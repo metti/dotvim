@@ -175,6 +175,9 @@ hi mailQuoted4	ctermfg=blue
 hi mailQuoted5	ctermfg=blue
 hi mailQuoted6	ctermfg=blue
 
+packadd termdebug
+let g:termdebug_wide=1
+
 " Include local configuration (touch it if it fails)
 source ~/.vimrc.local
 
